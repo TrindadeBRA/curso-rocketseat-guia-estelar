@@ -1,0 +1,36 @@
+<script>
+
+// Crie um objeto que possuirá 2 propriedades, ambas do tipo array:
+//     * receitas:  
+//     * despesas: 
+// Agora, crie uma função que irá calcular o total de receitas e 
+// despesas e irá mostrar uma mensagem se a família está com 
+// saldo positivo ou negativo, seguido do valor do saldo.
+
+let $object = {
+    'Receitas' : Array(
+        40000,
+        2000
+    ),
+    'Despesas' : Array(
+        2000,
+        1000,
+        2000,
+        5000
+    ),
+}
+
+function calculaDinheiroMensal($object){
+    $receitas = $object.Receitas.reduce((acc, item) => acc + item);
+    $despesas = $object.Despesas.reduce((acc, item) => acc + item);
+
+    if($receitas > $despesas) {
+        return `Você está positivo R$${$receitas - $despesas}`
+    } else if($receitas < $despesas) {
+        return `Você está negativo R$${$receitas - $despesas}`
+    }
+}
+
+console.log(calculaDinheiroMensal($object))
+
+</script>

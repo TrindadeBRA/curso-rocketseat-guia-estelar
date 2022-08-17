@@ -1,0 +1,38 @@
+<script>
+
+// Crie um algoritmo que transforme as notas do sistema
+// numérico para sistema de notas em caracteres tipo A B C
+
+// * de 90 para cima -   A
+// * entre 80 - 89   -   B
+// * entre 70 - 79   -   C
+// * entre 60 - 69   -   D
+// * menor que 60    -   F
+
+function notasEscolares($nota) {
+    if($nota >= 90) {
+        $nota = "A"
+    } else if($nota >= 80) {
+        $nota = "B"
+    } else if($nota >= 70) {
+        $nota = "C"
+    } else if($nota >= 60) {
+        $nota = "D"
+    } else if($nota < 60) {
+        $nota = "F"
+    } else {
+        $nota = "Nota inválida!"
+    }
+    console.log($nota)
+}
+
+notasEscolares(100)
+notasEscolares(90)
+notasEscolares(80)
+notasEscolares(70)
+notasEscolares(60)
+notasEscolares(50)
+notasEscolares(-4)
+notasEscolares(1000)
+
+</script>
